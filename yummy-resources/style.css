@@ -22,16 +22,23 @@ header section:nth-of-type(1){
 header section:nth-of-type(1) a{
     padding: 15px;
 }
-header section:nth-of-type(1) div{
-    position: relative; 
-    width: 25px; 
-    height: 20px; 
-    margin-left: 15px;
+header section:nth-of-type(1) > div:nth-of-type(1){
+    width: 30px; 
+    height: 30px; 
     background-color:#742B2F; 
-    clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+    clip-path: polygon(0% 0%, 0% 100%, 100% 50%); 
+    position: relative;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
 }
-header section:nth-of-type(1) div div{
-    
+header section:nth-of-type(1) > div:nth-of-type(1) > div{
+    width: 10px; 
+    height: 10px; 
+    background-color: #fff; 
+    border-radius: 100%; 
+    position: relative; 
+    margin-left: 5px;
 }
 header ul{
     display: flex;
@@ -94,7 +101,7 @@ main section a{
 main section:nth-of-type(3){
     background-color: white;
 }
-main section:nth-of-type(5){
+main section:nth-of-type(5),main section:nth-of-type(10){
     width: 100%;
 }
 main section h2{
@@ -102,12 +109,12 @@ main section h2{
     margin: 40px;
     text-align: center;
 }
-main section:nth-of-type(3) p,main section:nth-of-type(5) p{
+main section:nth-of-type(3) p,main section:nth-of-type(5),main section:nth-of-type(10) p{
     font-size: 2.5em;
     text-align: center;
     margin: 40px;
 }
-main section:nth-of-type(5){
+main section:nth-of-type(5), main section:nth-of-type(10){
     margin-top: 120px;
     margin-bottom: 40px;
 }
@@ -122,5 +129,9 @@ main section:nth-of-type(6) img,main section:nth-of-type(7) img,main section:nth
 main section:nth-of-type(9){
     width: 100%;
     filter: opacity(50%);
+}
+main section:nth-of-type(10){
+    background-color: white;
+    box-shadow: 0 0 0 120px white;
 }
 
